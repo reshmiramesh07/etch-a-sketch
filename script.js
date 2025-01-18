@@ -3,7 +3,6 @@
 /** @type {HTMLElement | null} */
 
 const setDimensions = document.querySelector("#set-dimen");
-// let dimensions = 4;
 
 function createDivs(dimensions) {
   const gridContainer = document.querySelector("#grid-container");
@@ -33,6 +32,13 @@ function setDimen() {
 }
 
 setDimensions.addEventListener("click", () => {
+  // remove existing grid
+  const gridContainer = document.querySelector("#grid-container");
+  while (gridContainer.hasChildNodes()) {
+    gridContainer.removeChild(gridContainer.firstChild);
+  }
+
+  // create new grid with inputted dimensions
   createDivs(setDimen());
   let divs = document.querySelectorAll(".grid-box");
   divs.forEach((el) => {
