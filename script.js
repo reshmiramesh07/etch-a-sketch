@@ -20,13 +20,6 @@ function createDivs(dimensions) {
   }
 }
 
-let divs = document.querySelectorAll(".grid-box");
-divs.forEach((el) =>
-  el.addEventListener("mouseover", () => {
-    el.style.backgroundColor = "red";
-  })
-);
-
 function setDimen() {
   let dimensions = prompt(
     "How many squares do you want on a side length of the grid?"
@@ -41,4 +34,10 @@ function setDimen() {
 
 setDimensions.addEventListener("click", () => {
   createDivs(setDimen());
+  let divs = document.querySelectorAll(".grid-box");
+  divs.forEach((el) => {
+    el.addEventListener("mouseover", () => {
+      el.style.backgroundColor = "purple";
+    });
+  });
 });
