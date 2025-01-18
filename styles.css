@@ -1,6 +1,8 @@
-.grid-container {
-  height: 100vh;
-  width: 100vw;
+#grid-container {
+  justify-content: center;
+  height: 70%;
+  width: 70%;
+  border: 3px solid black;
 }
 
 .grid-box {
